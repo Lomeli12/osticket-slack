@@ -13,7 +13,8 @@ class SlackPlugin extends Plugin {
 	
 	function onTicketCreated($ticket){		
 		try {			
-			global $ost;		
+			global $ost;
+				
 			$payload = array(
 						'attachments' =>
 							array (
@@ -36,7 +37,10 @@ class SlackPlugin extends Plugin {
 								),
 							),
 						);
-						
+		
+			$Dept_Channel=$this->getConfig()->get('channel-'.$ticket->getDeptId());
+			if(isset($Dept_Channel)) $payload['channel'] = $Dept_Channel;
+
 			$data_string = utf8_encode(json_encode($payload));
 			$url = $this->getConfig()->get('slack-webhook-url');
 			 
