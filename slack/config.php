@@ -15,15 +15,16 @@ class SlackPluginConfig extends PluginConfig {
                 'label' => 'Webhook URL',
                 'configuration' => array('size'=>100, 'length'=>200),
             )),
-            'slack-channel' => new SectionBreakField(array(
-                'label' => 'Send message to Slack channel / user',
-            )),
-            'slack-bot-name' => new TextboxField(array(
+			'slack-bot-name' => new TextboxField(array(
                 'label' => 'Name for slack bot',
                 'configuration' => array('size'=>100, 'length'=>200),
             )),
             'slack-icon' => new TextboxField(array(
-                'label' => 'Avatar for slack bot',
+                'label' => 'URL for slack bot avatar',
+				'configuration' => array('size'=>100, 'length'=>200),
+            )),
+            'slack-channel' => new SectionBreakField(array(
+                'label' => 'Send message to Slack channel / user',
             ))
         );
 
