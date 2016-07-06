@@ -16,8 +16,15 @@ class SlackPluginConfig extends PluginConfig {
                 'configuration' => array('size'=>100, 'length'=>200),
             )),
             'slack-channel' => new SectionBreakField(array(
-                'label' => 'send Message to Slack channel / user',
+                'label' => 'Send message to Slack channel / user',
             )),
+            'slack-bot-name' => new TextboxField(array(
+                'label' => 'Name for slack bot',
+                'configuration' => array('size'=>100, 'length'=>200),
+            )),
+            'slack-icon' => new TextboxField(array(
+                'label' => 'Avatar for slack bot',
+            ))
         );
 
         $depts = Dept::getDepartments();        
