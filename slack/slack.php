@@ -14,9 +14,7 @@ class SlackPlugin extends Plugin {
 	function onTicketCreated($ticket){		
 		try {			
 			global $ost;
-                        $icon_url = $this->getConfig()->get('slack-icon');
-                        $user = $this->getConfig()->get('slack-bot-name');
-				
+
 			$payload = array(
 						'attachments' =>
 							array (
@@ -38,9 +36,9 @@ class SlackPlugin extends Plugin {
 									),
 								),
 							),
-						'username' => $user,
-						'as_user' => True,
-						'icon_url' => $icon_url,
+						'username' => $this->getConfig()->get('slack-bot-name'),
+						'as_user' => False,
+						'icon_url' => $this->getConfig()->get('slack-icon'),
 						);
 		
 			$Dept_Channel=$this->getConfig()->get('channel-'.$ticket->getDeptId());
