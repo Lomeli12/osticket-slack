@@ -5,7 +5,7 @@ return array(
     'version' =>        '0.2',
     'name' =>           'Slack notifier',
     'author' =>         'Anthony Lomeli/Johannes mueller-werner/Thammanna Jammada',
-    'description' =>    'Notify Slack on new ticket.',
+    'description' =>    'Notify Slack about a new ticket.',
     'url' =>            'https://github.com/thammanna/osticket-slack',
     'plugin' =>         'slack.php:SlackPlugin',        
 );

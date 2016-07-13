@@ -28,7 +28,7 @@ class SlackPlugin extends Plugin {
 									array(
 										array (
 											'title' => $ticket->getSubject(),
-											'value' => "created by " . $ticket->getName() . "(" . $ticket->getEmail() 
+											'value' => "Created by " . $ticket->getName() . "(" . $ticket->getEmail() 
 														. ") in " . $ticket->getDeptName() . "(Department) via " 
 														. $ticket->getSource(),
 											'short' => False,
